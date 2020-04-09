@@ -1,7 +1,7 @@
 def primo(numero):
-    if num < 1:
+    if numero < 1:
         return False
-    elif num == 2:
+    elif numero== 2:
         return True
     else:
         for i in range(2, numero):
@@ -9,7 +9,7 @@ def primo(numero):
                 return False
         return True
 
-palabra=input("Introduce una cadena: ")
+palabra=str(input("Introduce una cadena: ")).lower()
 lista={}
 for letra in palabra:
     if letra in lista:
@@ -19,6 +19,6 @@ for letra in palabra:
 for i in lista:
     print('La letra',i,'aparece:',lista[i],'veces')
     if (primo(lista[i])==True):
-        print('es primo')
+        print('aparece un numero primo de veces')
     else:
-        print('no es primo')
+        print('no aparece un numero primo de veces')
