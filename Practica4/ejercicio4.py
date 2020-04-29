@@ -1,4 +1,4 @@
-import PySimpleGUI as sg
+iimport PySimpleGUI as sg
 import time
 import json
 textos = {'background_color': '#222831', 'font' : ('Arial',12),'justification':'center',}
@@ -10,7 +10,7 @@ layout = [
 
     [sg.Button('Añadir',**botones),sg.Button('Exportar',**botones)],
     [sg.Listbox('',size =(150,12),key='listbox')],
-    [sg.Button('SALIR',button_color=('#222831','#f2a365'),size=(8,1))]
+    [sg.Button('SALIR',button_color=('#222831','#f2a365'),size=(8,1))],
 ]
 datos={}
 lista=[]
@@ -24,7 +24,7 @@ while True:
         lista.append(datos)
         window.FindElement('listbox').Update(lista);
     if event in 'Exportar':
-        archivo = open('ejercicio4.txt','w')
+        archivo = open('ejercicio4.json','w')
         json.dump(lista,archivo)
         archivo.close()
 window.Close()
