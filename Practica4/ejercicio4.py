@@ -1,18 +1,20 @@
 import PySimpleGUI as sg
 import time
 import json
-textos = {'background_color': '#202040', 'font' : ('Arial',12),'justification':'center'}
+textos = {'background_color': '#222831', 'font' : ('Arial',12),'justification':'center',}
+botones = {'button_color':('#222831','#f0f0f0'),'size':(8,1)}
     #configuracion de la ventana
 layout = [
     [sg.Text('Humedad', **textos),sg.InputText ('',key ='humedad'),],
     [sg.Text('Temperatura',**textos),sg.InputText ('', key = 'temperatura') ],
 
-    [sg.Button('Añadir',button_color=('black','#ffbd69')),sg.Button('Exportar',button_color=('black','#ffbd69')),sg.Button('SALIR',button_color=('black','#ff6363'))],
-    [sg.Listbox('',size =(200,30),key='listbox')],
+    [sg.Button('Añadir',**botones),sg.Button('Exportar',**botones)],
+    [sg.Listbox('',size =(150,12),key='listbox')],
+    [sg.Button('SALIR',button_color=('#222831','#f2a365'),size=(8,1))]
 ]
 datos={}
 lista=[]
-window = sg.Window('Ejercicio4',layout=layout,background_color='#202040',size =(300,350))
+window = sg.Window('Ejercicio4',layout=layout,background_color='#222831',size =(300,350))
 while True:
     event, value = window.read()
     if event is None or event == 'SALIR':
