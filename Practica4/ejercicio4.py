@@ -2,7 +2,7 @@ import PySimpleGUI as sg
 import time
 import json
 textos = {'background_color': '#202040', 'font' : ('Arial',12),'justification':'center'}
-
+    #configuracion de la ventana
 layout = [
     [sg.Text('Humedad', **textos),sg.InputText ('',key ='humedad'),],
     [sg.Text('Temperatura',**textos),sg.InputText ('', key = 'temperatura') ],
@@ -18,12 +18,7 @@ while True:
     if event is None or event == 'SALIR':
         break
     if event in 'Añadir':
-        datos={
-        'dia' : time.strftime("%d/%m/%y"),
-        'hora': time.strftime("%H:%M"),
-        'T°' :value['temperatura'],
-        'H':value['humedad']
-        }
+        datos={'dia' : time.strftime("%d/%m/%y"),'hora': time.strftime("%H:%M"),'T°' :value['temperatura'],'H':value['humedad']}
         lista.append(datos)
         window.FindElement('listbox').Update(lista);
     if event in 'Exportar':
