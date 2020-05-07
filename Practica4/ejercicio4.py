@@ -1,4 +1,4 @@
-iimport PySimpleGUI as sg
+import PySimpleGUI as sg
 import time
 import json
 textos = {'background_color': '#222831', 'font' : ('Arial',12),'justification':'center',}
