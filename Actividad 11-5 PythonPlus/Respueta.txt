@@ -1,0 +1,5 @@
+Para almacenar el nombre y que juego eligió cada usuario se optó por una lista, donde cada nodo es un diccionario con Nombre y Juego,
+de esta forma es más sencillo agregar los nuevos valores a la lista y además si en un futuro queremos buscar un dato en concreto podemos utilizar las ventajas de los diccionarios
+
+Los valores se guardan en un archivo de texto con formato Json, esto es para poder abrir y modificar el archivo de una manera sencilla,
+ya que json mantiene la estructura de la lista de jugadores y juegos. 
